@@ -1,10 +1,5 @@
 module Staccato
   module SessionTracking
-    def self.included(controller)
-      controller.class_eval do
-        alias_method :tracker, :staccato_tracker unless defined?(tracker)
-      end
-    end
 
     def global_context
       {}
